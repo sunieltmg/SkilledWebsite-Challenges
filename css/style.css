@@ -85,7 +85,7 @@ img {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  padding: 0.5em 0;
+  margin: 0.5em 0;
 }
 
 .mainLeft .mainLeftDescription {
@@ -112,6 +112,7 @@ img {
 
 .mainRight {
   margin-left: 5em;
+  width: 100%;
 }
 
 .mainRight img {
@@ -122,14 +123,22 @@ img {
 @media only screen and (max-width: 968px) {
   .main .flex {
     flex-direction: column;
+    justify-content: start;
   }
   .mainLeft {
-    margin-bottom: 5em;
+    margin-bottom: 4em;
   }
 
   .mainLeft .mainLeftTitle {
     font-size: 2rem;
   }
+
+  .mainRight{
+    box-sizing: border-box;
+    overflow: hidden;
+    margin:0;
+  }
+
 }
 
 /* Course */
@@ -151,6 +160,12 @@ img {
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 968px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid > * {
